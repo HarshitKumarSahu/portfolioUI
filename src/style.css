@@ -81,7 +81,7 @@ header {
     align-items: center;
     justify-content: center;
     /* height: 100vh; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: calc(var(--one-block-size) * 0.43525) 0; 
     /* works as a height of header */
 }
@@ -125,7 +125,7 @@ figure {
     height: calc(var(--one-block-size) * 0.625);
 }
 
-section {
+/* section {
     position: relative;
     left: 0;
     width: 100%;
@@ -138,14 +138,69 @@ section {
 section figure {
     width: calc(var(--one-block-size) * 1);
     height: calc(var(--one-block-size) * 0.625);
+} */
+
+
+
+
+.testing {
+    position: relative;
+    left: 0;
+    width: 100%;
+    /* height: 100vh; */
+    /* padding: calc(var(--one-block-size) * 0.9575) 0;  full page*/ 
+    padding: calc(var(--one-block-size) * 0.5) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid aqua; */
+    font-size: calc(var(--one-block-size) * 0.225);
+    text-transform: uppercase;
+}
+.testing li {
+    gap: calc(var(--one-block-size) * 0.15);
+    padding: calc(var(--one-block-size) * 0.025) 0;
+}
+.testing figure {
+    width: calc(var(--one-block-size) * 0.45);
+    height: calc(var(--one-block-size) * 0.25);
+}
+.testing .underline {
+    border-bottom: calc(var(--one-block-size) * 0.015) solid #363636;
+    cursor: pointer;
+}
+.testing .highlight {
+    background-color: #F4FC08;
+    padding: 0 calc(var(--one-block-size) * 0.025);
 }
 
 
-/* .sec {
+.porjects {
+    position: relative;
+    left: 0;
     width: 100%;
-    height: 50vh;
-    background-color: #F7F7F5;
-} */
+    /* height: 100vh; */
+    padding: calc(var(--one-block-size) * 0.25) calc(var(--one-block-size) * 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid aqua;
+    /* font-size: calc(var(--one-block-size) * 0.225);
+    text-transform: uppercase; */
+}
+.porjects h1 {
+    font-size: calc(var(--one-block-size) * 0.75);
+    line-height: calc(var(--one-block-size) * 0.45);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.porjects ul {
+    padding: calc(var(--one-block-size) * 0.25) 0;
+}
+.porjects li {
+    border-top: 2px solid #363636;
+}
 
 
 
