@@ -65,12 +65,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: calc(var(--one-block-size) * 0.1)  calc(var(--one-block-size) * 0.15);
+    z-index: 999;
 }
 nav a {
     color: #363636;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: calc(calc(var(--one-block-size) * 0.0045) * -1);
+    mix-blend-mode: color-dodge;
 }
 header {
     position: relative;
@@ -185,7 +187,7 @@ section figure {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     /* font-size: calc(var(--one-block-size) * 0.225);
     text-transform: uppercase; */
 }
@@ -199,11 +201,59 @@ section figure {
     padding: calc(var(--one-block-size) * 0.25) 0;
 }
 .porjects li {
-    border-top: 2px solid #363636;
+    border-top: calc(var(--one-block-size) * 0.015) solid #363636;
+    justify-content: space-between;
+    padding: calc(var(--one-block-size) * 0.15) 0;
+    gap : calc(var(--one-block-size) * 0.15);
+}
+.porjects aside {
+    /* background-color: #F4FC08; */
+    width: calc((calc(100% - calc(var(--one-block-size) * 2.25)) - calc(var(--one-block-size) * 0.15)));
+    height: calc(var(--one-block-size) * 1.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.buttons-container {
+    /* background-color: aqua; */
+    width: 100%;
+}
+.buttons-container button {
+    padding: calc(var(--one-block-size) * 0.05) calc(var(--one-block-size) * 0.1);
+    border-radius: calc(var(--one-block-size) * 0.1125);
+    border: calc(var(--one-block-size) * 0.00525) solid #363636;
+    background-color: transparent;
+    font-size: calc(var(--one-block-size) * 0.075);
+}
+.porjects li h2 , .porjects li a {
+    font-size: calc(var(--one-block-size) * 0.185);
+}
+.porjects li p {
+    width: 60%;
+    font-size:  calc(var(--one-block-size) * 0.075);
+    margin: calc(var(--one-block-size) * 0.075) 0;
+}
+.porjects .line1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.porjects figure {
+    width: calc(var(--one-block-size) * 2.25);
+    height: calc(var(--one-block-size) * 1.5);
 }
 
 
 
+footer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
