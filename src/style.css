@@ -111,12 +111,22 @@ li h1 {
     /* align-self: center; */
 }
 .two h1 {
-    font-weight: 500;
+    /* font-weight: 500; */
+    /* font-family: serif; */
 }
 li aside {
     width: calc(var(--one-block-size) * 0.85);
-    font-size: calc(var(--one-block-size) * 0.0575);
+    /* font-size: calc(var(--one-block-size) * 0.0575); */
+    font-size:  calc(var(--one-block-size) * 0.075);
     /* align-self: flex-start;  */
+}
+header span {
+    padding: calc(var(--one-block-size) * 0.035) calc(var(--one-block-size) * 0.075);
+    border-radius: 50%;
+    border: calc(var(--one-block-size) * 0.00525) solid #363636;
+    background-color: transparent;
+    font-size: calc(var(--one-block-size) * 0.075);
+    margin-top: calc(var(--one-block-size) * 0.05);
 }
 /* li span {
     align-self: flex-end
@@ -229,12 +239,20 @@ section figure {
     margin-top: calc(var(--one-block-size) * 0.05);
 }
 .porjects li h2 , .porjects li a {
-    font-size: calc(var(--one-block-size) * 0.185);
+    /* font-size: calc(var(--one-block-size) * 0.185); */
+    font-size: calc(var(--one-block-size) * 0.225);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.porjects li a svg {
+    width: calc(var(--one-block-size) * 0.185);
+    height: calc(var(--one-block-size) * 0.185);
 }
 .porjects li p {
     width: 60%;
     font-size:  calc(var(--one-block-size) * 0.075);
     margin: calc(var(--one-block-size) * 0.075) 0;
+    text-transform: none;
 }
 .porjects ul li:last-child {
     border-bottom: calc(var(--one-block-size) * 0.015) solid #363636;
@@ -281,7 +299,60 @@ footer {
     color: #363636;
 }
 
-
+.getintouch {
+    position: relative;
+    left: 0;
+    width: 100%;
+    /* height: 100vh; */
+    padding: 0 calc(var(--one-block-size) * 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: calc(var(--one-block-size) * 0.5);
+}
+.getintouch .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.getintouch .top h1 {
+    font-size: calc(var(--one-block-size) * 0.75);
+    line-height: calc(var(--one-block-size) * 0.75);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.getintouch .top svg {
+    width: calc(var(--one-block-size) * 0.5);
+    height: calc(var(--one-block-size) * 0.5);
+}
+.getintouch button {
+    padding: calc(var(--one-block-size) * 0.075) calc(var(--one-block-size) * 0.125);
+    border-radius: calc(var(--one-block-size) * 0.275);
+    border: calc(var(--one-block-size) * 0.00525) solid #363636;
+    background-color: transparent;
+    /* font-size: calc(var(--one-block-size) * 0.075); */
+    font-size: calc(var(--one-block-size) * 0.225);
+    margin-top: calc(var(--one-block-size) * 0.05);
+    cursor: pointer;
+}
+/* .getintouch  .bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+/* .getintouch .contact {
+    width: calc(var(--one-block-size) * 1.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+} */
+/* .getintouch .contact span {
+    font-size:  calc(var(--one-block-size) * 0.075);
+    margin-top: calc(var(--one-block-size) * 0.025);
+} */
 
 /* Responsive Media Queries (Mobile-First) */
 /* Phone view: up to 576px */
@@ -289,6 +360,7 @@ footer {
     html, body {
         background-color: brown;
     }
+    
 }
 
 /* Tablet view: 577px to 768px */
