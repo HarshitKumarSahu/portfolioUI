@@ -17,6 +17,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* color: orange; */
 }
 html, body {
     width: 100%;
@@ -183,7 +184,8 @@ section figure {
     cursor: pointer;
 }
 .testing .highlight {
-    background-color: #F4FC08;
+    /* background-color: #F4FC08; */
+    background-color: orange;
     padding: 0 calc(var(--one-block-size) * 0.025);
 }
 
@@ -247,6 +249,7 @@ section figure {
 .porjects li a svg {
     width: calc(var(--one-block-size) * 0.185);
     height: calc(var(--one-block-size) * 0.185);
+    fill: #363636;
 }
 .porjects li p {
     width: 60%;
