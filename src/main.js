@@ -1,6 +1,9 @@
 import './testing.css'
 
 import gsap from 'gsap'
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(SplitText, ScrollTrigger) 
 
 let svgs = document.querySelectorAll("svg");
 
@@ -47,3 +50,83 @@ btns.forEach(btn => {
         });
     })
 });
+
+
+
+
+
+let h1s = document.querySelectorAll(".about-home h1")
+let lis = document.querySelectorAll(".about-home li")
+lis.forEach(li => {
+    let lisHeight = li.offsetHeight
+    h1s.forEach(h1 => {
+        h1.style.transform = `translateY(${lisHeight}px)`;
+        gsap.to(h1, {
+            y: 0,
+            duration: 1,
+            delay: 0.25,
+            ease:"power4.out",
+        })
+    });
+})
+
+
+
+
+
+
+
+// split elements with the class "split" into words and characters
+let split = SplitText.create(".about p", { type: "words, chars, lines" });
+let about = document.querySelector(".about")
+let aboutHeight = about.offsetHeight
+// now animate the characters in a staggered fashion
+gsap.from(split.lines, {
+  duration: 1, 
+  y: 50,       // animate from 100px below
+  autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
+  stagger: 0.125, // 0.05 seconds between each
+  scrollTrigger: {
+    trigger: '.about',
+    pin: true, // pin the trigger element while active
+	start: 'top top', // when the top of the trigger hits the top of the viewport
+	end: `+=${aboutHeight}`, // end after scrolling 500px beyond the start
+	scrub: 1,
+    markers:true
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+// // split elements with the class "split" into words and characters
+// let split1 = SplitText.create(".buttons-container", { type: "words, chars, lines" });
+// let about1 = document.querySelector(".tech-stack")
+// let aboutHeight1 = about.offsetHeight
+// // now animate the characters in a staggered fashion
+// gsap.from(split1.lines, {
+//   duration: 1, 
+//   y: 50,       // animate from 100px below
+//   autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
+//   stagger: 0.125, // 0.05 seconds between each
+//   scrollTrigger: {
+//     trigger: '.tech-stack',
+//     // pin: true, // pin the trigger element while active
+// 	start: 'top 30%', // when the top of the trigger hits the top of the viewport
+// 	end: `+=${aboutHeight1}`, // end after scrolling 500px beyond the start
+// 	scrub: 1,
+//     markers:true
+//   }
+// });
+
+
+
+

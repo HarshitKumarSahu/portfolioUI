@@ -384,6 +384,9 @@ footer {
     align-items: center;
     justify-content: center;
 }
+.about-home li {
+    overflow: hidden;
+}
 .about figure {
     position: absolute;
     /* background-color: #F4FC08; */
