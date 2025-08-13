@@ -1,9 +1,11 @@
 import './testing.css'
 
-import gsap from 'gsap'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(SplitText, ScrollTrigger) 
+
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 let svgs = document.querySelectorAll("svg");
 
@@ -107,25 +109,8 @@ gsap.from(split.lines, {
 
 
 
-// // split elements with the class "split" into words and characters
-// let split1 = SplitText.create(".buttons-container", { type: "words, chars, lines" });
-// let about1 = document.querySelector(".tech-stack")
-// let aboutHeight1 = about.offsetHeight
-// // now animate the characters in a staggered fashion
-// gsap.from(split1.lines, {
-//   duration: 1, 
-//   y: 50,       // animate from 100px below
-//   autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
-//   stagger: 0.125, // 0.05 seconds between each
-//   scrollTrigger: {
-//     trigger: '.tech-stack',
-//     // pin: true, // pin the trigger element while active
-// 	start: 'top 30%', // when the top of the trigger hits the top of the viewport
-// 	end: `+=${aboutHeight1}`, // end after scrolling 500px beyond the start
-// 	scrub: 1,
-//     markers:true
-//   }
-// });
+
+
 
 
 
